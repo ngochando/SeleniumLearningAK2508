@@ -5,9 +5,14 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 public class LoginTest extends BaseTest {
+    @BeforeMethod
+    public void openBrowser(){
+        driver.get("https://the-internet.herokuapp.com/login");
+    }
     /*
     TC01: Form Authentication : Login successful with valid credentials
 
