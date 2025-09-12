@@ -10,6 +10,8 @@ import org.testng.annotations.Test;
 public class LoginTest extends BaseTest {
     @Test
     public void successfullyWithValidCredential(){
+        driver.get("https://www.saucedemo.com/login");
+
         driver.findElement(By.id("user-name")).sendKeys("standard_user");
 
         driver.findElement(By.id("password")).sendKeys("secret_sauce");
